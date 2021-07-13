@@ -110,6 +110,10 @@ block content
                       .custom-control.custom-checkbox
                         input.custom-control-input#devices-column-11(type="checkbox")
                         label.custom-control-label(for="devices-column-11") Tempo Conectado
+                    a.dropdown-item(href="#")
+                      .custom-control.custom-checkbox
+                        input.custom-control-input#devices-column-12(type="checkbox")
+                        label.custom-control-label(for="devices-column-12") Estado do Sinal Óptico
                     .dropdown-divider
                     .text-right
                       #save-columns-confirm.fas.fa-check-circle.green-text.mr-1(style="opacity: 0;")
@@ -173,8 +177,10 @@ block content
                       a#sort-sys-uptime Tempo Ligado
                     th.text-center
                       a#sort-wan-uptime Tempo Conectado
+                    th.text-center
+                      a#sort-pon-signal Estado Sinal Óptico
                     if (superuser || role.grantFirmwareUpgrade)
-                      th.text-left Atualizar Firmware
+                      th.text-center Atualizar Firmware
                 tbody#devices-table-content(
                   data-role=role,
                   data-superuser=superuser ? "true" : "false",
